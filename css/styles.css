@@ -1,0 +1,277 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.balance-display {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.balance-display span:first-child {
+    margin-right: 8px;
+}
+
+/* Input Form Section */
+.input-form-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.input-form-section h2 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #219a52;
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    background-color: #fdeaea;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 16px;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+/* Transaction List Section */
+.transaction-list-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.transaction-list-section h2 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+}
+
+.transaction-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.transaction-item:hover {
+    background-color: #f9f9f9;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-name {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.transaction-details {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 4px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e74c3c;
+    margin-right: 16px;
+}
+
+.transaction-category {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    margin-right: 8px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Chart Section */
+.chart-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.chart-section h2 {
+    color: #2c3e50;
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+#category-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.no-data-message {
+    text-align: center;
+    color: #95a5a6;
+    font-size: 1.1rem;
+    padding: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .balance-display {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .transaction-amount {
+        margin-right: 0;
+        order: -1;
+    }
+}
+
+@media (max-width: 599px) {
+    .container {
+        padding: 12px;
+    }
+
+    .input-form-section,
+    .transaction-list-section,
+    .chart-section {
+        padding: 16px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+    }
+}
